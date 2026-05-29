@@ -107,82 +107,25 @@ class="hidden max-w-5xl mx-auto mt-6 bg-slate-800 p-6 rounded-3xl">
 </div>
 
 <script>
-
 function generateAI(){
 
-const category =
+const kategori =
 document.getElementById("category").value;
 
-const location =
+const lokasi =
 document.getElementById("location").value;
 
-const result =
-document.getElementById("result");
+const ratio =
+document.getElementById("ratio").value;
 
-result.classList.remove("hidden");
-
-result.innerHTML = `
-
-<h2 class="text-2xl font-bold mb-4">
-🎬 Storyboard AI
-</h2>
-
-<div class="space-y-3">
-
-<div class="bg-slate-700 p-4 rounded">
-🎯 Scene 1 - Hook
-</div>
-
-<div class="bg-slate-700 p-4 rounded">
-🔥 Scene 2 - Problem
-</div>
-
-<div class="bg-slate-700 p-4 rounded">
-✅ Scene 3 - Solution
-</div>
-
-<div class="bg-slate-700 p-4 rounded">
-📢 Scene 4 - CTA
-</div>
-
-</div>
-
-<div class="mt-4 p-4 bg-slate-900 rounded">
-
-<p>Kategori: ${category}</p>
-
-<p>Lokasi: ${location}</p>
-
-</div>
-
-`;
-
-}
-
-</script>
-<script>
-function generateAI(){
-
-let kategori =
-document.getElementById('category').value;
-
-let lokasi =
-document.getElementById('location').value;
-
-let ratio =
-document.getElementById('ratio').value;
-
-let hasil = `
+const hasil = `
 🎬 STORYBOARD AFFILIATE AI
 
-Kategori:
-${kategori}
+Kategori: ${kategori}
 
-Ratio:
-${ratio}
+Ratio: ${ratio}
 
-Lokasi:
-${lokasi}
+Lokasi: ${lokasi}
 
 SCENE 1
 Hook viral produk
@@ -204,8 +147,7 @@ ${lokasi},
 ${ratio},
 affiliate marketing style,
 cinematic,
-high detail,
-8k quality.
+8K quality.
 
 🎥 PROMPT VIDEO
 
@@ -213,15 +155,16 @@ Camera push in,
 slow motion,
 product showcase,
 cinematic lighting,
-viral tiktok style.
+viral TikTok style.
 `;
 
-document.getElementById("result").innerText = hasil;
+document.getElementById("result").textContent = hasil;
 
 document.getElementById("resultBox")
 .classList.remove("hidden");
 }
 </script>
+
 <div
 id="resultBox"
 class="hidden mt-5 bg-slate-800 p-4 rounded-xl">
