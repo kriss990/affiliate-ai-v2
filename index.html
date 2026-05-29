@@ -127,7 +127,130 @@ document.getElementById("location").value;
 const ratio =
 document.getElementById("ratio").value;
 
-const hasil = `
+let hasil = "";
+
+if(kategori === "Jam Tangan"){
+
+hasil = `
+⌚ STORYBOARD JAM TANGAN
+
+📸 PROMPT GAMBAR 1
+Luxury watch on male wrist,
+business outfit,
+premium office background,
+cinematic lighting,
+ultra realistic,
+8k detail.
+
+📸 PROMPT GAMBAR 2
+Close up watch dial,
+luxury photography,
+high detail,
+professional lighting.
+
+📸 PROMPT GAMBAR 3
+Business man checking time,
+premium lifestyle,
+shallow depth of field.
+
+📸 PROMPT GAMBAR 4
+Product showcase,
+luxury watch on table,
+commercial advertising shot.
+
+🎥 PROMPT VIDEO 1
+Camera push in,
+watch reveal,
+cinematic movement.
+
+🎥 PROMPT VIDEO 2
+Close up rotating watch,
+luxury lighting.
+
+🎥 PROMPT VIDEO 3
+Model checking time,
+slow motion.
+
+🎥 PROMPT VIDEO 4
+Product hero shot,
+commercial ending scene.
+`;
+
+}
+
+else if(kategori === "Fashion"){
+
+hasil = `
+👕 STORYBOARD FASHION
+
+📸 PROMPT GAMBAR 1
+Fashion model posing,
+streetwear style,
+${lokasi},
+ultra realistic.
+
+📸 PROMPT GAMBAR 2
+Full body outfit showcase,
+cinematic lighting.
+
+📸 PROMPT GAMBAR 3
+Walking shot,
+viral TikTok style.
+
+📸 PROMPT GAMBAR 4
+Close up fabric details.
+
+🎥 PROMPT VIDEO 1
+Model walking confidently.
+
+🎥 PROMPT VIDEO 2
+Outfit transition effect.
+
+🎥 PROMPT VIDEO 3
+Close up clothing details.
+
+🎥 PROMPT VIDEO 4
+Final CTA fashion showcase.
+`;
+
+}
+
+else if(kategori === "Beauty"){
+
+hasil = `
+💄 STORYBOARD BEAUTY
+
+📸 PROMPT GAMBAR 1
+Beautiful woman skincare routine,
+soft lighting.
+
+📸 PROMPT GAMBAR 2
+Applying beauty product.
+
+📸 PROMPT GAMBAR 3
+Glowing skin close up.
+
+📸 PROMPT GAMBAR 4
+Premium product showcase.
+
+🎥 PROMPT VIDEO 1
+Beauty routine.
+
+🎥 PROMPT VIDEO 2
+Product application.
+
+🎥 PROMPT VIDEO 3
+Before after effect.
+
+🎥 PROMPT VIDEO 4
+Final CTA scene.
+`;
+
+}
+
+else{
+
+hasil = `
 🎬 STORYBOARD AFFILIATE AI
 
 Kategori: ${kategori}
@@ -136,36 +259,35 @@ Ratio: ${ratio}
 
 Lokasi: ${lokasi}
 
-SCENE 1
-Hook viral produk
-
-SCENE 2
-Masalah yang sering dialami pengguna
-
-SCENE 3
-Produk muncul sebagai solusi
-
-SCENE 4
-Close up detail produk
-
-📸 PROMPT GAMBAR GEMINI OMNI
-
-Ultra realistic product photography,
-professional lighting,
+📸 PROMPT GAMBAR 1
+Professional product photography,
 ${lokasi},
 ${ratio},
-affiliate marketing style,
-cinematic,
-8K quality.
+ultra realistic.
 
-🎥 PROMPT VIDEO
+📸 PROMPT GAMBAR 2
+Close up product shot.
 
-Camera push in,
-slow motion,
-product showcase,
-cinematic lighting,
-viral TikTok style.
+📸 PROMPT GAMBAR 3
+Lifestyle usage scene.
+
+📸 PROMPT GAMBAR 4
+Commercial advertising scene.
+
+🎥 PROMPT VIDEO 1
+Product reveal.
+
+🎥 PROMPT VIDEO 2
+Feature showcase.
+
+🎥 PROMPT VIDEO 3
+Lifestyle scene.
+
+🎥 PROMPT VIDEO 4
+CTA ending scene.
 `;
+
+}
 
 document.getElementById("result").textContent = hasil;
 
