@@ -31,14 +31,10 @@ Upload Produk, Model dan Tempat
 <input type="file" class="w-full mt-2">
 </div>
 
-<div class="mb-4">
-<label>Foto Tempat</label>
-<input type="file" class="w-full mt-2">
-</div>
 
 <div class="mb-4">
 <label>Ratio Video</label>
-<select class="w-full p-3 rounded text-black">
+<select id="ratio" class="w-full p-3 rounded text-black">
 <option>9:16</option>
 <option>16:9</option>
 <option>1:1</option>
@@ -48,11 +44,28 @@ Upload Produk, Model dan Tempat
 
 <div class="mb-4">
 <label>Kategori Affiliate</label>
-<select class="w-full p-3 rounded text-black">
+<select id="category" class="w-full p-3 rounded text-black">
 <option>Fashion</option>
 <option>Beauty</option>
+<option>Skincare</option>
+<option>Makeup</option>
 <option>Elektronik</option>
+<option>Gadget</option>
+<option>Aksesoris HP</option>
+<option>Jam Tangan</option>
+<option>Sepatu</option>
+<option>Tas</option>
 <option>Rumah Tangga</option>
+<option>Dapur</option>
+<option>Furniture</option>
+<option>Otomotif</option>
+<option>Kesehatan</option>
+<option>Fitness</option>
+<option>Makanan</option>
+<option>Minuman</option>
+<option>Properti</option>
+<option>Ebook</option>
+<option>Kursus Online</option>
 </select>
 </div>
 
@@ -100,10 +113,6 @@ GENERATE AI
 
 </div>
 
-</div>
-<div
-id="result"
-class="hidden max-w-5xl mx-auto mt-6 bg-slate-800 p-6 rounded-3xl">
 </div>
 
 <script>
