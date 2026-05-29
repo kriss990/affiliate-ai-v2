@@ -162,8 +162,77 @@ result.innerHTML = `
 </script>
 <script>
 function generateAI(){
-    alert("Test berhasil");
+
+let kategori =
+document.getElementById('category').value;
+
+let lokasi =
+document.getElementById('location').value;
+
+let ratio =
+document.getElementById('ratio').value;
+
+let hasil = `
+🎬 STORYBOARD AFFILIATE AI
+
+Kategori:
+${kategori}
+
+Ratio:
+${ratio}
+
+Lokasi:
+${lokasi}
+
+SCENE 1
+Hook viral produk
+
+SCENE 2
+Masalah yang sering dialami pengguna
+
+SCENE 3
+Produk muncul sebagai solusi
+
+SCENE 4
+Close up detail produk
+
+📸 PROMPT GAMBAR GEMINI OMNI
+
+Ultra realistic product photography,
+professional lighting,
+${lokasi},
+${ratio},
+affiliate marketing style,
+cinematic,
+high detail,
+8k quality.
+
+🎥 PROMPT VIDEO
+
+Camera push in,
+slow motion,
+product showcase,
+cinematic lighting,
+viral tiktok style.
+`;
+
+document.getElementById("result").innerText = hasil;
+
+document.getElementById("resultBox")
+.classList.remove("hidden");
 }
 </script>
+<div
+id="resultBox"
+class="hidden mt-5 bg-slate-800 p-4 rounded-xl">
+
+<h3 class="font-bold mb-3">
+Hasil Generate
+</h3>
+
+<pre id="result"
+class="whitespace-pre-wrap"></pre>
+
+</div>
 </body>
 </html>
