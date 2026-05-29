@@ -57,16 +57,43 @@ Upload Produk, Model dan Tempat
 </div>
 
 <div class="mb-4">
-<label>Jenis Video</label>
-<select class="w-full p-3 rounded text-black">
-<option>UGC Creator</option>
-<option>Storytelling</option>
-<option>Review Produk</option>
-<option>Soft Selling</option>
+
+<label>Lokasi Scene</label>
+
+<select
+id="location"
+class="w-full p-3 rounded text-black">
+
+<option>Otomatis AI</option>
+
+<option>Dalam Ruangan</option>
+<option>Luar Ruangan</option>
+
+<option>Kamar Tidur</option>
+<option>Ruang Tamu</option>
+<option>Dapur Modern</option>
+
+<option>Kantor</option>
+<option>Cafe</option>
+<option>Mall</option>
+
+<option>Studio</option>
+<option>Taman</option>
+<option>Pantai</option>
+
+<option>Jalan Kota</option>
+<option>Gym</option>
+<option>Restoran</option>
+
+<option>Showroom</option>
+<option>Toko Retail</option>
+
 </select>
+
 </div>
 
 <button
+onclick="generateAI()"
 class="w-full bg-emerald-500 py-4 rounded-xl font-bold">
 GENERATE AI
 </button>
@@ -74,6 +101,64 @@ GENERATE AI
 </div>
 
 </div>
+<div
+id="result"
+class="hidden max-w-5xl mx-auto mt-6 bg-slate-800 p-6 rounded-3xl">
+</div>
 
+<script>
+
+function generateAI(){
+
+const category =
+document.getElementById("category").value;
+
+const location =
+document.getElementById("location").value;
+
+const result =
+document.getElementById("result");
+
+result.classList.remove("hidden");
+
+result.innerHTML = `
+
+<h2 class="text-2xl font-bold mb-4">
+🎬 Storyboard AI
+</h2>
+
+<div class="space-y-3">
+
+<div class="bg-slate-700 p-4 rounded">
+🎯 Scene 1 - Hook
+</div>
+
+<div class="bg-slate-700 p-4 rounded">
+🔥 Scene 2 - Problem
+</div>
+
+<div class="bg-slate-700 p-4 rounded">
+✅ Scene 3 - Solution
+</div>
+
+<div class="bg-slate-700 p-4 rounded">
+📢 Scene 4 - CTA
+</div>
+
+</div>
+
+<div class="mt-4 p-4 bg-slate-900 rounded">
+
+<p>Kategori: ${category}</p>
+
+<p>Lokasi: ${location}</p>
+
+</div>
+
+`;
+
+}
+
+</script>
 </body>
 </html>
